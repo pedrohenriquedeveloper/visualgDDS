@@ -1,0 +1,22 @@
+Algoritmo "glicose_USANDO_SE"
+Var
+glicose: inteiro
+
+Inicio
+escreval("Digite sua glicose: ")
+leia(glicose)
+
+se glicose <= 100 entao
+   escreval("sua glicose é normal")
+senao
+     se glicose <= 140 entao
+        escreval("sua glicose é elevada")
+     senao
+          se glicose > 140 entao
+             escreval("Você esta com diabetes")
+          fimse
+     fimse
+fimse
+
+
+Fimalgoritmo

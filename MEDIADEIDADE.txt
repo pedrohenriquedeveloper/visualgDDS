@@ -1,0 +1,27 @@
+Algoritmo "mediaDEidade"
+Var
+nome1, nome2 :caracter
+idade1, idade2 :inteiro
+media : real
+Inicio
+escreval("qual seu nome ?")
+leia (nome1)
+
+escreval("qual sua idade ?")
+leia (idade1)
+
+escreval("qual seu nome ?")
+leia (nome2)
+
+escreval("qual sua idade ?")
+leia (idade2)
+
+media<- (idade1 + idade2) / 2
+
+escreval("A idade média de " , nome1, " e " , nome2, " é de" , media, " anos")
+
+
+
+
+
+Fimalgoritmo

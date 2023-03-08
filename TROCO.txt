@@ -1,0 +1,24 @@
+Algoritmo "semnome"
+Var
+nome: caracter
+valorporH, horasTR, pagamento: real
+Inicio
+
+escreval("qual seu nome ?")
+leia(nome)
+
+escreval("quanto você recebe por hora ?")
+leia(valorporH)
+
+escreval("quantas horas você trabalhou ?")
+leia(horasTR)
+
+pagamento<- valorporH * horasTR
+
+escreval("O pagamento para ", nome , " deve ser :", pagamento)
+
+
+
+
+
+Fimalgoritmo

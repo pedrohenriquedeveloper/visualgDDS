@@ -1,0 +1,42 @@
+Algoritmo "aumento"
+Var
+salario, aumento, total: real
+
+
+Inicio
+escreval("digite quanto você ganha")
+leia(salario)
+
+se salario <= 1000 entao
+   aumento<- salario * (20/100)
+   total <- aumento+ salario
+   escreval("Seu novo salário é de: ", total)
+   escreval("o aumento foi de: ", aumento, "$")
+   escreval("A porcentagem de aumento foi de: 20% ")
+
+senao
+        se (salario > 1000) e (salario <= 3000) entao
+           aumento<- salario * (15/100)
+           total <- aumento+ salario
+           escreval("Seu novo salário é de: ", total)
+           escreval("o aumento foi de: ", aumento, "$")
+           escreval("A porcentagem de aumento foi de: 15% ")
+        senao
+             se  (salario > 3000) e (salario <= 8000) entao
+                 aumento<- salario * (10/100)
+                 total <- aumento+ salario
+                 escreval("Seu novo salário é de: ", total)
+                 escreval("o aumento foi de: ", aumento, "$")
+                 escreval("A porcentagem de aumento foi de: 10% ")
+             senao
+                  se salario > 8000 entao
+                     aumento<- salario * (5/100)
+                     total <- aumento+ salario
+                     escreval("Seu novo salário é de: ", total)
+                 escreval("o aumento foi de: ", aumento, "$")
+               escreval("A porcentagem de aumento foi de: 5% ")
+                  fimse
+             fimse
+        fimse
+fimse
+Fimalgoritmo

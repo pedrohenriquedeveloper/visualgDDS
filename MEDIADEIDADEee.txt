@@ -1,0 +1,34 @@
+Algoritmo "mediadeIdade"
+Var
+contador, numero, soma,parar: inteiro
+media: real
+
+
+Inicio
+contador<- 1
+numero<- 1
+soma<-0
+parar<-0
+
+
+enquanto (contador <> 0) e (numero <> 0) faça
+         escreval("digite um número: ")
+         leia(numero)
+
+            se numero <> 0 entao
+
+            parar <- parar + 1
+            soma <-soma + numero
+            fimse
+
+fimenquanto
+se (parar > 0) entao
+
+   media<- soma / parar
+   escreval(" a media é de: " , media)
+
+senao
+escreval("operaçao invalida")
+fimse
+
+Fimalgoritmo

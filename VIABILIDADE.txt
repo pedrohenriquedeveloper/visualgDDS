@@ -1,0 +1,137 @@
+Algoritmo "viabilidade"
+Var
+total, Kmdia,Kmmes, autGas, autGnv,valorGas, combGasFrota, combGnvFrota ,valorGnv,investUnit, custoGas, custoGnv ,combGas, combGnv, economia, economiaperce, economiaFrota ,pb: real
+frota,dias: inteiro
+respp: caracter
+
+Inicio
+escreval("digite quantos km o carro roda por dia")
+leia(kmdia)
+
+escreval("digite quantos dias uteis você trabalha")
+leia(dias)
+
+escreval("qual é o valor gasolina?")
+leia(valorGas)
+
+escrevaL("qual é o valor do GNV?")
+leia(valorGNV)
+
+escreval("quanto a empresa ira investir?")
+leia(investUnit)
+
+escreval("qual é sua frota?")
+leia (frota)
+
+escreval("digite sua autonomia a Gasolina")
+leia(autGas)
+
+autGnv<- (autGas * 30) / 100
+autGnv<- autGnv + autGas
+
+escreval("A autonomia a GNV é de:" ,autGnv, "Km/lt")
+
+
+escreval("vamos calcular um exemplo de 1 carro, ok?")
+leia(respp)
+
+se respp = "ok" entao
+   limpatela
+senao
+fimse
+
+kmmes<- kmdia * dias
+
+escreval("O veiculo roda por mês: ", kmmes , "km")
+
+combGas <- kmmes / autGas
+combGnv<- kmmes / autGnv
+escreval("A quantidade de gasolina necessária para rodar 1 mês é de:", combGas:3:2, "Lts")
+escreval(" ")
+escreval("A quantidade de GNV necessária para rodar 1 mês é de:", combGnv:3:2, "m³")
+
+custoGas<- combGas * valorGas
+custoGnv <- combGnv * valorGnv
+
+escreval(" ")
+
+escreval("o custo total de gasolina é de: R$ " , custoGas:3:2)
+escreval("o custo total de GNV é de: R$ " , custoGnv:3:2)
+
+economia<- custoGas - custoGnv
+
+escreval("A economia com GNV é de: R$ " , economia:3:2)
+
+economiaperce<- (economia * 100) / custoGas
+
+escreval("Uma economia de: ", economiaperce:2:0 ,"%" )
+
+pb<- investUnit / economia
+escreval("O PayBack de 1 unidade é de: ", pb:2:0, " meses")
+escreval(" ")
+escreval("vamos calcular a frota ok?")
+leia(respp)
+
+se respp = "ok" entao
+   limpatela
+senao
+fimse
+
+kmdia<- kmdia * frota
+kmmes<- kmmes * frota
+
+combGasFrota<- combGas * frota
+combGnvFrota<- combGnv * frota
+
+custoGnv<- custoGnv * frota
+custoGas<- custoGAS * frota
+
+escreval("A frota roda por dia: ", kmdia, "Km/dia")
+escreval("A frota roda por mês: ", kmmes, "Km/mês")
+escreval("A quantidade de gasolina necessária para a frota rodar 1 mês é de: ", combGasFrota:3:2, "Lts")
+escreval("A quantidade de GNV necessária para a frota rodar 1 mês é de: ", combGnvFrota:3:2, "m³")
+escreval(" ")
+escreval("o custo total que a frota ira utilizar de GNV é de: R$ " , custoGnv:3:2)
+escreval("o custo total que a frota ira utilizar de Gasolina é de: R$ " , custoGas:3:2)
+escreval(" A autonomia dos veiculos com GNV é de: ", autGnv, "km/lt")
+
+escreval(" ")
+
+se custoGnv < custoGas entao
+   total<- custoGas - custoGnv
+   escreval("economia de R$", total:4:2)
+senao
+     total<-custoGnv - custoGas
+     escreval("gasto exedente de R$", total:4:2)
+fimse
+
+economia<- custoGas - custoGnv
+
+escreval("A economia da frota com GNV é de: R$ " , economia:3:2)
+economiaFrota<- (economia * 100) / custoGas
+escreval("Uma economia de: ", economiaFrota:2:0 ,"%" )
+
+escreval("vamos decidir se haverá viabilidade com base nos estudos, ok?")
+leia(respp)
+
+se respp = "ok" entao
+   limpatela
+senao
+fimse
+
+escreval("O valor que a empresa ira disponibilizar para cada carro é de: ", investUnit)
+
+investUnit<-investUnit * frota
+
+escreval("O valor de investimento para os" , frota , "carros é de: ", investUnit)
+
+pb<-investUnit / economia
+escreval("O PayBack será de: ", pb:2:1, " meses")
+
+se pb > 12 entao
+   escreval("O estudo aponta que é Inviável")
+senao
+     escreval("O estudo aponte que é Totalmente Viável")
+fimse
+
+Fimalgoritmo

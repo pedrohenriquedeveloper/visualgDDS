@@ -1,0 +1,23 @@
+Algoritmo "Tabuada"
+Var
+n1, contador, total : inteiro
+
+
+Inicio
+contador<- 0
+
+escreva("digite um numero: ")
+leia(n1)
+escreval(" ")
+
+enquanto (contador < 10)  faca
+         contador<-contador + 1
+         total<- n1 * contador
+         escreval(n1 , " x" ,contador, " = " ,total)
+fimenquanto
+
+
+
+
+
+Fimalgoritmo
